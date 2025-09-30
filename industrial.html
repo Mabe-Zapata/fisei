@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ingeniería Industrial – UTA | FISEI</title>
+  <meta name="description" content="Página básica informativa de la Carrera de Ingeniería Industrial de la Universidad Técnica de Ambato (FISEI)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --azul:#0D2B81; /* paleta base solicitada por el usuario en trabajos previos */
+      --celeste:#f5f5f5;
+      --crema:#FFF3E0;
+      --verde:#20603D;
+      --acento:#E53935; /* rojo */
+      --texto:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--texto);background:linear-gradient(180deg,#ffffff, #f8fafc)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    /* Header */
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:42px;height:42px;border-radius:10px;background:conic-gradient(from 180deg,var(--azul),#841515,var(--verde));box-shadow:0 6px 20px rgba(13,43,129,.25)}
+    .brand h1{font-size:1.1rem;line-height:1.1;margin:0}
+    .brand small{display:block;color:#475569;font-weight:600}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:10px;font-weight:600;color:#334155}
+    nav a:hover{background:#eef2ff;color:#1e293b}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:var(--crema);color:#9a3412;border:1px solid #fed7aa;padding:6px 10px;border-radius:999px;font-weight:700}
+    .hero h2{font-size:clamp(1.8rem,4.8vw,3rem);margin:12px 0;color:var(--azul)}
+    .hero p{font-size:1.05rem;color:#334155}
+    .cta{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:10px 16px;border-radius:12px;font-weight:700;border:2px solid transparent}
+    .btn.primary{background:var(--azul);color:#fff}
+    .btn.primary:hover{opacity:.92}
+    .btn.outline{border-color:var(--azul);color:var(--azul);background:#fff}
+    .btn.outline:hover{background:#eef2ff}
+    .card-illus{background:linear-gradient(135deg,#e0ecff,#fff);border:1px solid #e5e7eb;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(2,6,23,.08)}
+    .illus{aspect-ratio:4/3;border-radius:14px;background:repeating-linear-gradient(135deg,rgba(13,43,129,.12) 0 10px, rgba(32,96,61,.12) 10px 20px),radial-gradient(120px 60px at 70% 30%, rgba(13,43,129,.18), transparent 60%),linear-gradient(180deg,#ffffff,#eef2ff);display:grid;place-items:center;color:#1e293b;font-weight:800;}
+    .illus span{font-size:1.2rem}
+
+    /* Sections */
+    section{padding:48px 0}
+    h3{font-size:1.6rem;color:#0f172a;margin:8px 0 18px}
+    .grid{display:grid;gap:20px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,.04)}
+    .card h4{margin:6px 0 8px;color:#111827}
+    .muted{color:#64748b}
+    ul.clean{padding-left:18px;margin:0}
+
+    /* Footer */
+    footer{margin-top:32px;background:#0b1220;color:#cbd5e1}
+    .foot{display:grid;gap:14px;padding:26px 0}
+    .foot small{color:#94a3b8}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .cols-3{grid-template-columns:1fr}
+      .cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Universidad Técnica de Ambato</h1>
+          <small>FISEI · Carrera de Ingeniería Industrial</small>
+        </div>
+      </div>
+      <nav aria-label="Secciones principales">
+        <ul>
+          <li><a href="#sobre">Sobre la carrera</a></li>
+          <li><a href="#objetivos">Objetivos</a></li>
+          <li><a href="#malla">Áreas de estudio</a></li>
+          <li><a href="#laboratorios">Laboratorios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="badge">FISEI • Ingeniería Industrial</span>
+          <h2>Formamos profesionales que optimizan procesos y transforman la industria.</h2>
+          <p>
+            La carrera de <strong>Ingeniería Industrial</strong> de la <strong>Universidad Técnica de Ambato</strong> (FISEI) desarrolla competencias en
+            mejora continua, gestión de operaciones, seguridad y productividad, apoyada en tecnología y compromiso con el desarrollo sostenible.
+          </p>
+          <div class="cta">
+            <a href="#malla" class="btn primary">Ver áreas de estudio</a>
+            <a href="#contacto" class="btn outline">Solicitar información</a>
+          </div>
+        </div>
+        <div class="card-illus" aria-hidden="true">
+          <div class="illus">
+            <span>UTA · FISEI · IND</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h3>Sobre la carrera</h3>
+          <p>
+            Ingeniería Industrial integra conocimientos de ciencias básicas, procesos de manufactura y gestión para <strong>diseñar, mejorar e implementar sistemas productivos</strong> que involucren personas, materiales, información y energía. El enfoque es práctico, con proyectos alineados a la realidad del sector productivo ecuatoriano.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Perfil de egreso</h3>
+          <ul class="clean">
+            <li>Gestión de operaciones y cadena de suministro.</li>
+            <li>Lean manufacturing, Six Sigma y mejora continua.</li>
+            <li>Seguridad y salud ocupacional, ergonomía.</li>
+            <li>Gestión de calidad (ISO 9001) y confiabilidad.</li>
+            <li>Transformación digital y analítica de datos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objetivos -->
+    <section id="objetivos" style="background:var(--celeste)">
+      <div class="container">
+        <h3>Objetivos de formación</h3>
+        <div class="grid cols-3">
+          <div class="card">
+            <h4>Excelencia técnica</h4>
+            <p class="muted">Aplicar métodos cuantitativos y herramientas industriales para resolver problemas reales con criterio ético.</p>
+          </div>
+          <div class="card">
+            <h4>Productividad sostenible</h4>
+            <p class="muted">Optimizar procesos con enfoque en calidad, seguridad y sostenibilidad ambiental.</p>
+          </div>
+          <div class="card">
+            <h4>Innovación y liderazgo</h4>
+            <p class="muted">Gestionar proyectos, liderar equipos multidisciplinarios y promover la mejora continua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Áreas de estudio / malla breve -->
+    <section id="malla">
+      <div class="container">
+        <h3>Áreas de estudio (resumen)</h3>
+        <div class="grid cols-3">
+          <div class="card">
+            <h4>Procesos y Manufactura</h4>
+            <ul class="clean">
+              <li>Diseño de procesos</li>
+              <li>Gestión de operaciones</li>
+              <li>Logística y SCM</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Calidad y Mejora Continua</h4>
+            <ul class="clean">
+              <li>Control estadístico</li>
+              <li>Lean &amp; Six Sigma</li>
+              <li>Normas ISO</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Personas y Seguridad</h4>
+            <ul class="clean">
+              <li>Ergonomía</li>
+              <li>Higiene y seguridad</li>
+              <li>Gestión del cambio</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Laboratorios -->
+    <section id="laboratorios" style="background:var(--crema)">
+      <div class="container">
+        <h3>Laboratorios y recursos</h3>
+        <div class="grid cols-3">
+          <div class="card">
+            <h4>Simulación y Datos</h4>
+            <p class="muted">Software de simulación discreta, optimización y minería de datos para toma de decisiones.</p>
+          </div>
+          <div class="card">
+            <h4>Procesos y Calidad</h4>
+            <p class="muted">Bancos didácticos, metrología y control de calidad para prácticas aplicadas.</p>
+          </div>
+          <div class="card">
+            <h4>Seguridad Industrial</h4>
+            <p class="muted">Equipamiento para evaluación de riesgos, ergonomía y ambientes de trabajo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="container grid cols-2">
+        <div class="card">
+          <h3>Contacto</h3>
+          <p class="muted">Facultad de Ingeniería en Sistemas, Electrónica e Industrial – FISEI</p>
+          <ul class="clean">
+            <li><strong>Dirección:</strong> Ambato, Ecuador</li>
+            <li><strong>Correo:</strong> info@uta.edu.ec (referencial)</li>
+            <li><strong>Horario:</strong> L–V 08h00–17h00</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>¿Listo para saber más?</h3>
+          <p class="muted">Solicita información académica, requisitos de ingreso y malla completa a través de los canales oficiales de la UTA.</p>
+          <a class="btn primary" href="https://fisei.uta.edu.ec/v4.0/index.php/carreras-y-programas/ingenieria-industrial";return false;">Ir a admisiones</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <strong>Universidad Técnica de Ambato – FISEI</strong><br />
+        <small>© <span id="y"></span>. Página demostrativa para fines académicos.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
