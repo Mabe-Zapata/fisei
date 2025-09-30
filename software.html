@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Carrera de Ingeniería de Software | FISEI</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Hero / Banner */
+    .hero {
+      position: relative;
+      min-height: 340px;
+      background: url("img/software-hero.jpg") center/cover no-repeat; /* <-- reemplaza por tu imagen */
+    }
+    .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)); }
+    .hero-content{ position:relative; z-index:1; color:#fff; padding:5rem 1rem; }
+    .hero h1{ font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+    .hero .badge{ background:#8E2C2C; }
+
+    /* Layout */
+    .page{
+      margin-top: 80px; /* despega del navbar fijo */
+    }
+    .sidebar .list-group-item{
+      border:0; border-radius:.6rem; margin-bottom:.45rem;
+      box-shadow:0 1px 0 rgba(0,0,0,.04), 0 2px 6px rgba(0,0,0,.06);
+    }
+    .sidebar .list-group-item.active{
+      background:#7b1113; border-color:#7b1113;
+    }
+    .section-title{
+      font-weight:800; margin-top:1rem;
+    }
+    .divider{
+      width:100%; height:3px; background:#7b1113; border-radius:8px; margin:.5rem 0 1rem;
+    }
+    .card-soft{ border:0; box-shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06); border-radius:1rem; }
+    .lead-justify{ text-align:justify; }
+    .mini-meta{ font-size:.95rem; opacity:.8; }
+    @media (max-width: 991.98px){
+      .sticky-lg-top{ position:static !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (opcional si reutilizas el header del index) -->
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">FISEI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Horarios</a></li>
+
+            <!-- Desplegable Carreras (como en la página principal) -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="carrerasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Carreras
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="carrerasDropdown">
+                <li><a class="dropdown-item active" href="software.html">Software</a></li>
+                <li><a class="dropdown-item" href="robotica.html">Automatización y Robótica</a></li>
+                <li><a class="dropdown-item" href="industrial.html">Ingeniería Industrial</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar"/>
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge fs-6 mb-2">FISEI — Universidad Técnica de Ambato</span>
+      <h1 class="display-5">Carrera de Ingeniería de Software</h1>
+      <p class="mini-meta">Formación con enfoque en calidad, innovación y resolución de problemas reales mediante metodologías modernas y tecnologías emergentes.</p>
+    </div>
+  </section>
+
+  <!-- Contenido -->
+  <main class="page container">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-4">
+        <div class="sticky-lg-top pt-2 sidebar">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action active" href="#mision-vision">Misión · Visión</a>
+            <a class="list-group-item list-group-item-action" href="#informacion">Información general</a>
+            <a class="list-group-item list-group-item-action" href="#objetivos">Objetivos de la carrera</a>
+            <a class="list-group-item list-group-item-action" href="#perfil-ingreso">Perfil de ingreso</a>
+            <a class="list-group-item list-group-item-action" href="#perfil-egreso">Perfil de egreso</a>
+            <a class="list-group-item list-group-item-action" href="#campo-ocupacional">Campo ocupacional</a>
+            <a class="list-group-item list-group-item-action" href="#malla">Malla curricular</a>
+            <a class="list-group-item list-group-item-action" href="#requisitos">Requisitos de admisión</a>
+            <a class="list-group-item list-group-item-action" href="#coordinacion">Coordinación de carrera</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Principal -->
+      <section class="col-lg-8">
+
+        <!-- Misión - Visión -->
+        <div id="mision-vision" class="card card-soft p-4">
+          <h2 class="section-title">Misión</h2>
+          <div class="divider"></div>
+          <p class="lead lead-justify">
+            Formar profesionales íntegros y competentes en Ingeniería de Software, con pensamiento crítico y compromiso ético,
+            capaces de diseñar, construir, validar, desplegar y mantener soluciones de software de alta calidad.
+            La carrera promueve la docencia, la investigación aplicada, la innovación y la vinculación con la sociedad para
+            responder a necesidades del entorno productivo y público.
+          </p>
+
+          <h2 class="section-title mt-4">Visión</h2>
+          <div class="divider"></div>
+          <p class="lead lead-justify">
+            Ser un programa referente a nivel nacional por su calidad académica, impacto tecnológico y aporte al desarrollo
+            sostenible; reconocido por egresados con sólidos fundamentos, manejo de metodologías ágiles, buenas prácticas
+            de ingeniería y uso responsable de tecnologías emergentes como inteligencia artificial y computación en la nube.
+          </p>
+        </div>
+
+        <!-- Información -->
+        <div id="informacion" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Información general</h2>
+          <div class="divider"></div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Título:</strong> Ingeniero/a de Software</li>
+                <li class="list-group-item"><strong>Modalidad:</strong> Presencial</li>
+                <li class="list-group-item"><strong>Duración referencial:</strong> 9–10 semestres</li>
+                <li class="list-group-item"><strong>Créditos estimados:</strong> 300 ± (según malla vigente)</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Jornada:</strong> Matutina / Vespertina</li>
+                <li class="list-group-item"><strong>Unidad académica:</strong> FISEI</li>
+                <li class="list-group-item"><strong>Lugar:</strong> Ambato — Ecuador</li>
+                <li class="list-group-item"><strong>Prácticas:</strong> Proyectos, vinculación y pasantías</li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-3 mini-meta">
+            *Los valores exactos de créditos, duración y jornadas pueden variar de acuerdo a la malla curricular vigente.
+          </p>
+        </div>
+
+        <!-- Objetivos -->
+        <div id="objetivos" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Objetivos de la carrera</h2>
+          <div class="divider"></div>
+          <ul class="lead">
+            <li>Desarrollar competencias para el análisis, diseño, construcción, pruebas y mantenimiento de software con criterios de calidad, seguridad y sostenibilidad.</li>
+            <li>Fomentar el uso de metodologías ágiles, integración/entrega continua y DevOps para la gestión eficiente del ciclo de vida del software.</li>
+            <li>Promover la investigación aplicada y la innovación con tecnologías emergentes: IA/ML, cloud, IoT, ciberseguridad.</li>
+            <li>Fortalecer habilidades blandas: comunicación efectiva, trabajo en equipo, liderazgo y ética profesional.</li>
+            <li>Vincular la formación con necesidades reales del sector productivo y del sector público, aportando a los ODS.</li>
+          </ul>
+        </div>
+
+        <!-- Perfil de ingreso -->
+        <div id="perfil-ingreso" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Perfil de ingreso</h2>
+          <div class="divider"></div>
+          <ul class="lead">
+            <li>Interés por la tecnología, resolución de problemas y pensamiento lógico.</li>
+            <li>Conocimientos básicos de matemáticas, física y uso de TIC.</li>
+            <li>Disposición para el aprendizaje autónomo, trabajo colaborativo y responsabilidad social.</li>
+          </ul>
+        </div>
+
+        <!-- Perfil de egreso -->
+        <div id="perfil-egreso" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Perfil de egreso</h2>
+          <div class="divider"></div>
+          <ul class="lead">
+            <li>Aplica principios de ingeniería de software (requisitos, arquitectura, diseño, pruebas y mantenimiento) y patrones de diseño.</li>
+            <li>Gestiona proyectos con metodologías ágiles (Scrum/Kanban), control de versiones y CI/CD.</li>
+            <li>Desarrolla soluciones web, móviles y de escritorio con enfoque en usabilidad, accesibilidad y seguridad.</li>
+            <li>Integra servicios en la nube, bases de datos, APIs y herramientas de analítica/IA cuando corresponda.</li>
+            <li>Demuestra ética profesional, comunicación efectiva y liderazgo en equipos multidisciplinarios.</li>
+          </ul>
+        </div>
+
+        <!-- Campo ocupacional -->
+        <div id="campo-ocupacional" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Campo ocupacional</h2>
+          <div class="divider"></div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <ul class="lead">
+                <li>Desarrollador/a de software (frontend, backend, full-stack).</li>
+                <li>Ingeniero/a de calidad y pruebas (QA/Automation).</li>
+                <li>Analista de requisitos y UX.</li>
+                <li>Administrador/a de bases de datos.</li>
+                <li>DevOps / SRE junior.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="lead">
+                <li>Arquitecto/a de software.</li>
+                <li>Líder técnico / Scrum Master.</li>
+                <li>Especialista en cloud, ciberseguridad o IA aplicada.</li>
+                <li>Emprendimiento tecnológico y consultoría.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malla curricular -->
+        <div id="malla" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Malla curricular</h2>
+          <div class="divider"></div>
+          <p class="lead-justify">
+            La malla integra fundamentos de programación, estructuras de datos, arquitectura de software, ingeniería de
+            requisitos, bases de datos, computación en la nube, metodologías ágiles, pruebas, seguridad, inteligencia artificial,
+            proyectos integradores y prácticas preprofesionales.
+          </p>
+        </div>
+
+        <!-- Requisitos -->
+        <div id="requisitos" class="card card-soft p-4 mt-4">
+          <h2 class="section-title">Requisitos de admisión</h2>
+          <div class="divider"></div>
+          <ul class="lead">
+            <li>Título de bachiller o equivalente reconocido.</li>
+            <li>Proceso de admisión vigente (inscripción, evaluación y asignación de cupo).</li>
+            <li>Documentación personal (cédula/pasaporte, fotos, certificados) según normativa institucional.</li>
+          </ul>
+          <p class="mini-meta">*Verifica fechas y detalles en el portal oficial de admisiones.</p>
+        </div>
+
+        <!-- Coordinación -->
+        <div id="coordinacion" class="card card-soft p-4 mt-4 mb-5">
+          <h2 class="section-title">Coordinación de carrera</h2>
+          <div class="divider"></div>
+          <div class="row g-3 align-items-center">
+            <div class="col-sm-3">
+              <img src="img/coordinador.jpg" class="img-fluid rounded" alt="Coordinación de Software"/> <!-- opcional -->
+            </div>
+            <div class="col-sm-9">
+              <p class="lead mb-1"><strong>Coordinador/a:</strong> (Nombre oficial de la coordinación)</p>
+              <p class="mb-1"><strong>Correo:</strong> software@uta.edu.ec</p>
+              <p class="mb-1"><strong>Atención:</strong> Lunes a viernes, 08:00–16:30</p>
+              <p class="mb-0"><strong>Ubicación:</strong> FISEI, Ambato — Ecuador</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="container py-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="mb-0">&copy; 2017–2025 FISEI — Universidad Técnica de Ambato</p>
+      <a href="#" class="btn btn-link">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
