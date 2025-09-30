@@ -1,0 +1,45 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: white;
+    /* Texto en blanco */
+}
+
+main {
+    flex: 1;
+    margin-top: 80px;
+}
+
+/* Cards personalizadas */
+.custom-card {
+    background-color: #1e1e1e;
+    /* gris oscuro */
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+.custom-card .card-title {
+    color: #00d1b2;
+    /* Verde-azulado moderno */
+    margin-bottom: 15px;
+}
+
+.custom-card .card-text,
+.custom-card ul,
+.custom-card p {
+    color: #e0e0e0;
+}
